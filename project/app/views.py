@@ -14,3 +14,7 @@ def contact(request):
 
 def registration(request):
     return render(request,'registration.html')
+
+
+def showProduct(request):
+    return render(request,'ShowProduct.html')

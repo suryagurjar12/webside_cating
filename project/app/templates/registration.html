@@ -1,8 +1,90 @@
 
 
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
-<h1> this is Registration page,</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    .home{
+      {% comment %} display: flex; {% endcomment %}
+      {% comment %} justify-content: center; {% endcomment %}
+      background-color: rgb(3, 23, 37);
+      border-radius: 30px;
+      box-shadow: 0px 3px 5px 8px  rgb(63, 63, 178); 
+       
+      font-size: 30px;
+      width: 500px;
+      height: 400px;
+      padding: 50px;
+      color: azure;
+    
+    
+    }
+    
+    
+    .home input{
+      font-size: 30px;
+    }
+    .h1{
+      justify-content: center;
+      display: flex; 
+    }
+    .ky{
+      background-color: red;
+      {% comment %} text-align: center; {% endcomment %}
+      width: 300px;
+      /* margin-left: 50%; */
+    }
+    .submit{
+    color: black;
+    }
+    .submit.hover{
+      color: azure;
+      background-color: black;
+    }
+
+  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    
+
+</head>
+<body>
+  <form action="{% url 'registration' %}", method="post">
+   {% csrf_token %}
+    <br>
+
+    <h1 class="h1">Registration Form</h1>
+    <br>
+    <center>
+  <div class="home">
+   
+         Name
+         <br>
+         <input type="text" name='name'> 
+        <br>
+        <br>
+         Email
+         <br><input type="email" name='email'>
+        <br>
+        <br>
+        Contact
+        <br>
+        <input type="integer" name='contact'>
+        <br>
+        <br>
+       <div class="submit"> <input type="submit" value="Register" ></div>
+     </form>
+   
+   </div>
+</center>
+</form>
+<img  src="{% static 'images/body.jpg' %}" height="500px"width="1270px"alt='surya'>
+</body>
+</html>
 
  {% endblock %}
