@@ -1,4 +1,4 @@
-{% extends 'home.html' %}
+{% extends 'base.html' %}
 {% load static %}
 
 
@@ -6,21 +6,30 @@
 
 {% block content %}
 
+
+    
+    <a href="{% url 'services' %}">
+   
+   
+
 <div class="bgimage"> </div>
     <div class="mycards">
         <div  class="display">
             <div class="card">
-                <h2>Card Title</h2>
+                <img src="{% static 'images/tyer.jpeg' %}"/>
+                <h2>Apollo Tyers</h2>
                 <p>Some example text. Some example text. Some example text.</p>
                 <button>Add</button>
             </div> 
             <div class="card">
-                <h2>Card Title</h2>
+                <img src="{% static 'images/LIwheels2.jpeg' %}"hieght="100px" width="340px"></img>
+                <h2>Alloy Wheel</h2>
                 <p>Some example text. Some example text. Some example text.</p>
                 <button>Add</button>
             </div> 
             <div class="card">
-                <h2>Card Title</h2>
+                <img src="{% static 'images/light3.jpeg' %}" hieght="100px" width="340px"></img>
+                <h2>Lights</h2>
                 <p>Some example text. Some example text. Some example text.</p>
                 <button>Add</button>
             </div> 
@@ -28,18 +37,22 @@
         
         
         <div  class="display">
+            
             <div class="card">
-                <h2>Card Title</h2>
+                <img src="{% static 'images/back_light.webp' %}" hieght="120px" width="350px" ></img>
+                <h2>Back Light</h2>
                 <p>Some example text. Some example text. Some example text.</p>
                 <button>Add</button>
             </div> 
             <div class="card">
-                <h2>Card Title</h2>
+                <img src="{% static 'images/LIwheels.jpeg' %}"></img>
+                <h2>Alloy Wheel</h2>
                 <p>Some example text. Some example text. Some example text.</p>
                 <button>Add</button>
             </div> 
             <div class="card">
-                <h2>Card Title</h2>
+                <img src="{% static 'images/light2.jpg' %}" hieght="120px" width="350px"  padding="10px"></img>
+                <h2>Focus Light</h2>
                 <p>Some example text. Some example text. Some example text.</p>
                 <button>Add</button>
             </div> 
